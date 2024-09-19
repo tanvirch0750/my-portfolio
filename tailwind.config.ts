@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     screens: {
       sm: '375px',
-      md: '768px',
+      md: '900px',
       lg: '1000px',
     },
     container: {

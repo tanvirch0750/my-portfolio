@@ -31,4 +31,10 @@ export const navItems: NavItem[] = [
     icon: 'orders',
     label: 'my-experience',
   },
+  {
+    title: 'Contact ',
+    href: '/contact',
+    icon: 'orders',
+    label: 'Contact',
+  },
 ];
