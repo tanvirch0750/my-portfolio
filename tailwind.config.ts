@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     screens: {
       sm: '375px',
-      md: '1000px',
-      lg: '1200px',
+      md: '768px',
+      lg: '1000px',
     },
     container: {
       center: true,
@@ -28,6 +28,8 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       colors: {
+        brand: '#010101',
+        'brand-secondary': '#1A1A1A',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

@@ -49,7 +49,7 @@ export function Navigation({
                   <Link
                     href={item.disabled ? '/' : item.href}
                     className={cn(
-                      'flex items-center gap-2 overflow-hidden rounded-xl py-2 text-sm font-medium text-white/70 antialiased border border-transparent hover:bg-white/5 hover:border-white/5 transition-all duration-200',
+                      'flex items-center gap-2 overflow-hidden rounded-lg py-2 text-sm font-medium text-white/70 antialiased border border-transparent hover:bg-white/5 hover:border-white/5 transition-all duration-200',
                       path === item.href
                         ? 'bg-white/10 border-white/15'
                         : 'bg-transparent border-transparent',

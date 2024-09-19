@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: 'Created with the help of Frontend Tribe',
 };
 
+// 001219
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,7 +35,7 @@ export default function RootLayout({
       >
         <div className="flex">
           <Sidebar />
-          <main className="w-full flex-1 overflow-hidden bg-gray-900 text-white">
+          <main className="w-full flex-1 overflow-hidden bg-brand text-white">
             <Header />
             {children}
           </main>
