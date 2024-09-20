@@ -73,9 +73,7 @@ export default function Home() {
             />
             <div className=" bg-brand border border-brand-secondary px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
               <div className=" bg-green-500 size-2.5 rounded-full"></div>
-              <div className=" text-sm font-medium">
-                Available for new projects
-              </div>
+              <div className=" text-sm font-medium">Available for work</div>
             </div>
           </div>
 

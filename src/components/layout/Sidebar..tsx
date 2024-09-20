@@ -91,7 +91,7 @@ export default function Sidebar({ className }: SidebarProps) {
       <div className="p-5 mt-auto">
         <ul className=" flex justify-between items-center gap-2 mb-6 px-2">
           {socialList?.map((s) => (
-            <li>
+            <li key={s?.title}>
               <TooltipProvider>
                 <Tooltip delayDuration={30}>
                   <TooltipTrigger asChild>

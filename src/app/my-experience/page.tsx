@@ -50,7 +50,7 @@ const educationData = [
 const trainingData = [
   {
     title: 'Reactive Accelerator',
-    institution: 'Learn with Summit',
+    institution: 'Learn with Sumit',
     date: '2024',
     description:
       'Advanced training in React.js and Next.js, focusing on deep understanding of the core principles of these frameworks.',
@@ -194,9 +194,9 @@ const ExperienceEducationPage = () => {
           {educationData.map((item, index) => (
             <Card>
               <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-              <p className="text-gray-400 italic mb-2">{item.date}</p>
+              <p className="text-white/60 italic mb-2">{item.date}</p>
               <p className="text-emerald-300 mb-2">{item.institution}</p>
-              <p className="text-gray-400">{item.description}</p>
+              <p className="text-white/60">{item.description}</p>
             </Card>
           ))}
         </div>
