@@ -15,6 +15,7 @@ export const portfolioProjects = [
     link: 'acme-corp',
     image: darkSaasLandingPage,
   },
+
   {
     company: 'Innovative Co',
     year: '2021',

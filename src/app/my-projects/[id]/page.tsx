@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DemoImg from '@/assets/projects/meet-ease/me1.png';
 import Card from '@/components/Card';
+import Autoplay from 'embla-carousel-autoplay';
 import {
   Carousel,
   CarouselContent,
@@ -13,6 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import ProjectCarousel from '@/components/ProjectCarousel';
 
 export default function ProjectDetailPage() {
   return (
@@ -60,7 +62,7 @@ export default function ProjectDetailPage() {
           <div className=" flex flex-wrap gap-2 md:gap-8">
             <Link
               href="#"
-              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-gray-700 rounded-lg text-white text-sm transition"
+              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
             >
               Live Preview
               <MoveUpRightIcon className="w-5 h-5 ml-2" />
@@ -68,7 +70,7 @@ export default function ProjectDetailPage() {
 
             <Link
               href="#"
-              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-gray-700 rounded-lg text-white text-sm transition"
+              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
             >
               Github Frontend
               <MoveUpRightIcon className="w-5 h-5 ml-2" />
@@ -76,7 +78,7 @@ export default function ProjectDetailPage() {
 
             <Link
               href="#"
-              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-gray-700 rounded-lg text-white text-sm transition"
+              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
             >
               Github Server
               <MoveUpRightIcon className="w-5 h-5 ml-2" />
@@ -110,7 +112,7 @@ export default function ProjectDetailPage() {
             />
           </Card>
 
-          <div className=" mt-8">
+          <div className=" mt-16">
             <h2 className=" text-2xl font-semibold mb-4">
               Users Pages and Features
             </h2>
@@ -177,27 +179,11 @@ export default function ProjectDetailPage() {
             </ul>
 
             <div>
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}>
-                      <Card className=" p-0 rounded-xl mt-8">
-                        <Image
-                          src={DemoImg}
-                          alt="Photo by Drew Beamer"
-                          className="h-full w-full object-contain rounded-xl"
-                        />
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className=" border-brand-secondary bg-brand-secondary hover:bg-brand-secondary/90 text-white/40 hover:text-white/40" />
-                <CarouselNext className=" border-brand-secondary bg-brand-secondary hover:bg-brand-secondary/90 text-white/40 hover:text-white/40" />
-              </Carousel>
+              <ProjectCarousel />
             </div>
           </div>
 
-          <div className=" mt-8">
+          <div className=" mt-16">
             <h2 className=" text-2xl font-semibold mb-4">
               Admin Pages and Features
             </h2>
@@ -264,27 +250,11 @@ export default function ProjectDetailPage() {
             </ul>
 
             <div>
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}>
-                      <Card className=" p-0 rounded-xl mt-8">
-                        <Image
-                          src={DemoImg}
-                          alt="Photo by Drew Beamer"
-                          className="h-full w-full object-contain rounded-xl"
-                        />
-                      </Card>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className=" border-brand-secondary bg-brand-secondary hover:bg-brand-secondary/90 text-white/40 hover:text-white/40" />
-                <CarouselNext className=" border-brand-secondary bg-brand-secondary hover:bg-brand-secondary/90 text-white/40 hover:text-white/40" />
-              </Carousel>
+              <ProjectCarousel />
             </div>
           </div>
 
-          <div className=" mt-8">
+          <div className=" mt-16">
             <h2 className=" text-2xl font-semibold mb-4">Conclusion</h2>
             <p className=" text-white/60">
               This is house related service Booking and Management. A one-stop

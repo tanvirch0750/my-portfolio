@@ -7,7 +7,7 @@ import { CheckIcon } from 'lucide-react';
 const experienceData = [
   {
     title: 'Front-End Developer Intern',
-    company: 'View AI',
+    company: 'View AI - Canada  (Remote)',
     date: 'December, 2023 - June, 2024',
     description:
       'View AI is the AI verifier company that helps enterprise customers deliver on the full potential of AI through performance monitoring and optimization, explainability, and bias mitigation.',
@@ -130,7 +130,7 @@ const trainingData = [
 const ExperienceEducationPage = () => {
   return (
     <PageContainer scrollable={true}>
-      <section className="max-w-4xl mx-auto py-10 md:py-14 px-4 md:px-10">
+      <section className="lg:container py-10 md:py-14 px-4 md:px-10">
         <div className=" text-center">
           <SectionHeader
             title="My Journey Through Learning and Work"

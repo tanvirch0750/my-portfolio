@@ -4,6 +4,7 @@ import Sidebar from '@/components/layout/Sidebar.';
 import { Inter, Calistoga } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
 import Header from '@/components/layout/Header';
+import FramerProvider from './providers/StoreProvider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const calistoga = Calistoga({
@@ -37,7 +38,7 @@ export default function RootLayout({
           <Sidebar />
           <main className="w-full flex-1 overflow-hidden bg-brand text-white">
             <Header />
-            {children}
+            <FramerProvider> {children}</FramerProvider>
           </main>
         </div>
       </body>
