@@ -30,7 +30,7 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistoga.variable,
-          'bg-gray-900 text-white font-sans antialiased'
+          'bg-brand text-white font-sans antialiased'
         )}
       >
         <div className="flex">

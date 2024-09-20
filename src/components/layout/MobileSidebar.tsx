@@ -23,7 +23,7 @@ export function MobileSidebar({ className }: SidebarProps) {
         </SheetTrigger>
         <SheetContent
           side="left"
-          className="!px-0 bg-gray-900 border-transparent"
+          className="!px-0 bg-brand-secondary border-transparent"
         >
           <div className="space-y-4 py-4">
             <div className="px-3 py-2">

@@ -37,7 +37,7 @@ export function Navigation({
   }
 
   return (
-    <nav className="grid items-start gap-3">
+    <nav className="grid items-start gap-1">
       <TooltipProvider>
         {items.map((item, index) => {
           // @ts-ignore

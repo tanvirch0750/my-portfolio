@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Card from './Card';
-import { MailIcon, Section } from 'lucide-react';
+import { MailIcon, PhoneIcon, Section } from 'lucide-react';
 import SectionHeader from './SectionHeader';
 
 const ContactForm = () => {
@@ -27,38 +27,38 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-black text-white min-h-screen flex flex-col items-center py-12">
+    <section className="lg:container text-white min-h-screen flex flex-col items-center py-12">
       <div className="max-w-4xl w-full p-8">
         <div className=" border-b border-brand-secondary">
           <h2 className="text-4xl font-semibold mb-4">Contact</h2>
-          <p className="text-lg mb-8">
+          <p className="text-lg mb-8 text-white/60">
             I'm always excited to collaborate on innovative and exciting
             projects!
           </p>
         </div>
 
         {/* Contact Info */}
-        <div className=" mb-12 mt-8">
-          <div className="flex items-center space-x-2">
-            <Card className="p-2 rounded-full">
-              <MailIcon />
+        <div className=" mb-20 mt-8 flex flex-col md:flex-row justify-between gap-5 max-w-[600px]">
+          <div className="flex items-center gap-4">
+            <Card className="p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center">
+              <MailIcon className=" text-emerald-300" strokeWidth={1} />
             </Card>
-
-            <span className="text-lg text-gray-400">hello@linicki.design</span>
+            <div className=" flex flex-col gap-1">
+              <span className="text-sm text-white/50">Email</span>
+              <span className="text-white/80">tanvirch7575@gmail.com</span>
+            </div>
           </div>
 
-          <div className="flex items-center space-x-2">
-            <span className="text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M2 8a6 6 0 0111.34-2.75L14 6l1.17-1.17a2 2 0 012.83 0l1.83 1.83a2 2 0 010 2.83l-7 7a2 2 0 01-2.83 0L10 16l-1.75.66A6 6 0 112 8zm12-1a5 5 0 11-5-5 5 5 0 015 5z" />
-              </svg>
-            </span>
-            <span className="text-lg text-gray-400">+48 442 232 141</span>
+          <div className="flex items-center gap-4">
+            <Card className="p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center">
+              <PhoneIcon className=" text-emerald-300" strokeWidth={1} />
+            </Card>
+            <div className=" flex flex-col gap-1">
+              <span className="text-sm text-white/50 pl-1">
+                Phone & WhatsApp
+              </span>
+              <span className="text-white/80">+8801302047933</span>
+            </div>
           </div>
         </div>
 
@@ -78,7 +78,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Jane Smith"
-                className="w-full p-3 bg-brand text-white rounded-lg border border-gray-700 focus:outline-none"
+                className="w-full p-3 bg-brand text-white rounded-lg border border-brand-secondary focus:outline-none"
               />
             </div>
 
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="jane@framer.com"
-                className="w-full p-3 bg-brand text-white rounded-lg border border-gray-700 focus:outline-none"
+                className="w-full p-3 bg-brand text-white rounded-lg border border-brand-secondary focus:outline-none"
               />
             </div>
 
@@ -108,7 +108,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 placeholder="How can I help you?"
                 rows={4}
-                className="w-full p-3 bg-brand text-white rounded-lg border border-gray-700 focus:outline-none"
+                className="w-full p-3 bg-brand text-white rounded-lg border border-brand-secondary focus:outline-none"
               />
             </div>
 

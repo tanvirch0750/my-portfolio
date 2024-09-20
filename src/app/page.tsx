@@ -6,6 +6,7 @@ import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
 import Image from 'next/image';
 import HeroOrbit from '@/components/HeroOrbit';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -89,14 +90,20 @@ export default function Home() {
           </div>
 
           <div className=" flex flex-col md:flex-row items-center mt-8 gap-4 justify-center">
-            <button className=" inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer">
+            <Link
+              href="/my-projects"
+              className=" inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer"
+            >
               <span className=" font-semibold">Explore My Work</span>
               <ArrowDown className="size-4" />
-            </button>
-            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer"
+            >
               <span>👋</span>
               <span className="font-semibold">Let's connect</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

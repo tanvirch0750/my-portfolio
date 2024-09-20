@@ -2,10 +2,7 @@ import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import PageContainer from '@/components/layout/PageContainer';
 import { MapPinHouseIcon } from 'lucide-react';
-
 import JavascriptIcon from '@/assets/icons/square-js.svg';
-import HTMLIcon from '@/assets/icons/html5.svg';
-import CSSIcon from '@/assets/icons/css3.svg';
 import ChromeIcon from '@/assets/icons/chrome.svg';
 import ReactIcon from '@/assets/icons/react.svg';
 import Github from '@/assets/icons/github.svg';
@@ -107,7 +104,7 @@ export default function AboutMePage() {
                 <span className="text-gray-400">Dhaka, Bangladesh</span>
               </div>
 
-              <div className="bg-gray-900 w-full h-[1px] col-span-9 hidden lg:block">
+              <div className="bg-brand-secondary w-full h-[1px] col-span-9 hidden lg:block">
                 &nbsp;
               </div>
             </div>
