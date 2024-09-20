@@ -32,7 +32,7 @@ const ContactForm = () => {
     <section className="lg:container text-white min-h-screen flex flex-col items-center py-12">
       <div className="max-w-4xl w-full p-8">
         <div className=" border-b border-brand-secondary">
-          <h2 className="text-4xl font-semibold mb-4">Contact</h2>
+          <h2 className="text-4xl font-semibold mb-4 ">Contact</h2>
           <p className="text-lg mb-8 text-white/60">
             I'm always excited to collaborate on innovative and exciting
             projects!
@@ -65,7 +65,9 @@ const ContactForm = () => {
         </div>
 
         {/* Form */}
-        <h3 className="text-2xl font-semibold mb-4">Send a message</h3>
+        <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-emerald-300 to-sky-400  text-transparent bg-clip-text">
+          Send a message
+        </h3>
 
         <Card>
           <form onSubmit={handleSubmit} className=" space-y-4">

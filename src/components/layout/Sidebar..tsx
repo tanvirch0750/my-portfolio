@@ -26,7 +26,7 @@ type SidebarProps = {
   className?: string;
 };
 
-const socialList = [
+export const socialList = [
   {
     title: 'Gitgub',
     link: 'https://github.com/tanvirch0750',

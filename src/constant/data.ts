@@ -31,12 +31,7 @@ export const navItems: NavItem[] = [
     icon: 'education',
     label: 'my-experience',
   },
-  {
-    title: 'Training & Certificate',
-    href: '/training',
-    icon: 'certificate',
-    label: 'my-experience',
-  },
+
   {
     title: 'Contact ',
     href: '/contact',
