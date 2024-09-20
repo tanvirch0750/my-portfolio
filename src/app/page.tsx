@@ -99,7 +99,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer"
+              className=" inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer"
             >
               <span>👋</span>
               <span className="font-semibold">Let's connect</span>

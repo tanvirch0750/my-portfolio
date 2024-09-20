@@ -66,6 +66,10 @@ const hobbies = [
     title: 'Exercize',
     emoji: '🏃🏾‍♂️‍➡️',
   },
+  {
+    title: 'Exploring AI World',
+    emoji: '🤖',
+  },
 ];
 
 export default function AboutMePage() {
@@ -172,7 +176,7 @@ export default function AboutMePage() {
                 {hobbies?.map((item) => (
                   <div
                     key={item?.title}
-                    className=" inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5"
+                    className=" inline-flex items-center gap-2 px-4 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5"
                   >
                     <span className=" font-medium text-gray-950">
                       {item?.title}

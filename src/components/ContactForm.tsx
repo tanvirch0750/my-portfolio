@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import Card from './Card';
-import { MailIcon, PhoneIcon, Section } from 'lucide-react';
-import SectionHeader from './SectionHeader';
+
+import MailIcon from '@/assets/icons/mail-svgrepo-com.svg';
+import PhoneIcon from '@/assets/icons/phone-svgrepo-com.svg';
+import TechIcon from './TechIcon';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -41,7 +43,7 @@ const ContactForm = () => {
         <div className=" mb-20 mt-8 flex flex-col md:flex-row justify-between gap-5 max-w-[600px]">
           <div className="flex items-center gap-4">
             <Card className="p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center">
-              <MailIcon className=" text-emerald-300" strokeWidth={1} />
+              <TechIcon component={MailIcon} />
             </Card>
             <div className=" flex flex-col gap-1">
               <span className="text-sm text-white/50">Email</span>
@@ -51,7 +53,7 @@ const ContactForm = () => {
 
           <div className="flex items-center gap-4">
             <Card className="p-2 rounded-full w-[45px] h-[45px] flex items-center justify-center">
-              <PhoneIcon className=" text-emerald-300" strokeWidth={1} />
+              <TechIcon component={PhoneIcon} />
             </Card>
             <div className=" flex flex-col gap-1">
               <span className="text-sm text-white/50 pl-1">
@@ -92,7 +94,7 @@ const ContactForm = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="jane@framer.com"
+                placeholder="jane@company.com"
                 className="w-full p-3 bg-brand text-white rounded-lg border border-brand-secondary focus:outline-none"
               />
             </div>

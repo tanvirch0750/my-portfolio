@@ -60,7 +60,7 @@ export default function MyProjectsPage() {
                   <ArrowRightIcon className="size-4" />
                 </Link> */}
                     <Link
-                      href={project?.link}
+                      href={`/my-projects/${project?.link}`}
                       className=" bg-white text-brand h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 md:w-auto px-6"
                     >
                       <ArrowRight className="size-4 " />
