@@ -1,22 +1,20 @@
 import PageContainer from '@/components/layout/PageContainer';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import { CheckCircledIcon } from '@radix-ui/react-icons';
-import { MoveUpRightIcon } from 'lucide-react';
-import Image from 'next/image';
+import { CheckCircle, MoveUpRightIcon } from 'lucide-react';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
-import DemoImg from '@/assets/projects/meet-ease/me1.png';
 import Card from '@/components/Card';
-import Autoplay from 'embla-carousel-autoplay';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import ProjectCarousel from '@/components/ProjectCarousel';
+import { projectsData } from '@/constant/data';
 
-export default function ProjectDetailPage() {
+export default function ProjectDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const [project] = projectsData?.filter((item) => item?.tag === params?.id);
+
+  console.log(project);
+
   return (
     <PageContainer scrollable={true}>
       <section className="lg:container pt-3 pb-10 px-4 md:px-10 ">
@@ -30,8 +28,8 @@ export default function ProjectDetailPage() {
           </Link>
 
           {/* Project Title */}
-          <h1 className="text-4xl font-bold mb-8 mt-12">
-            New Financial System
+          <h1 className="text-3xl font-bold mb-8 mt-12">
+            {project?.title} - {project?.type}
           </h1>
 
           {/* Project Details */}
@@ -39,16 +37,13 @@ export default function ProjectDetailPage() {
             {/* Date */}
             <div className="sm:col-span-2 hidden md:block">
               <h4 className="text-white/50 text-sm mb-2">Date</h4>
-              <p className="text-white/70">2023 - 2024</p>
+              <p className="text-white/70">{project?.year}</p>
             </div>
 
             {/* Service */}
             <div className="col-span-7 md:col-span-5">
               <h4 className="text-white/50 text-sm mb-2">Core Technologies</h4>
-              <p className="text-white/70">
-                Next.js, Typescript, Redux, Ant Design, Node Js, Express,
-                PostgreSQL, Prisma and JWT
-              </p>
+              <p className="text-white/70">{project?.technologies}</p>
             </div>
 
             {/* Client */}
@@ -60,53 +55,28 @@ export default function ProjectDetailPage() {
 
           {/* Live Preview Button */}
           <div className=" flex flex-wrap gap-2 md:gap-8">
-            <Link
-              href="#"
-              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
-            >
-              Live Preview
-              <MoveUpRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-
-            <Link
-              href="#"
-              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
-            >
-              Github Frontend
-              <MoveUpRightIcon className="w-5 h-5 ml-2" />
-            </Link>
-
-            <Link
-              href="#"
-              className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
-            >
-              Github Server
-              <MoveUpRightIcon className="w-5 h-5 ml-2" />
-            </Link>
+            {project?.links?.map((link) => (
+              <Link
+                key={link?.title}
+                href={link?.link}
+                className="inline-flex items-center px-6 py-3 bg-brand-secondary hover:bg-brand-secondary/90 hover:bg-brand-secondary rounded-lg text-white text-sm transition"
+              >
+                {link.title}
+                <MoveUpRightIcon className="w-5 h-5 ml-2" />
+              </Link>
+            ))}
           </div>
         </div>
 
         <div className=" bg-brand text-white px-2 sm:px-2 py-8">
           <div>
             <h2 className=" text-2xl font-semibold mb-4">Overview</h2>
-            <p className=" text-white/60">
-              This is house related service Booking and Management. A one-stop
-              platform offering a wide range of house servicing options,
-              user-friendly registration and booking features, and a review
-              system for service quality. The project provides robust
-              administrative tools, allowing admins to manage users, services,
-              and bookings. Super admins have the ability to add and manage
-              admin users, ensuring efficient control of the platform's
-              activities. Prioritizing user experience with an intuitive booking
-              system, user dashboard, and feedback forms. Backend integration of
-              Node.js, Prisma, PostgreSQL, and Next.js on the frontend ensures
-              efficiency and a responsive interface.
-            </p>
+            <p className=" text-white/60">{project?.overview}</p>
           </div>
 
           <Card className=" p-0 rounded-xl mt-8">
             <Image
-              src={DemoImg}
+              src={project?.heroImg}
               alt="Photo by Drew Beamer"
               className="h-full w-full object-contain rounded-xl"
             />
@@ -116,159 +86,72 @@ export default function ProjectDetailPage() {
             <h2 className=" text-2xl font-semibold mb-4">
               Users Pages and Features
             </h2>
-            <ul className=" flex flex-col gap-2 text-white/60">
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
+            <ul className=" flex flex-col gap-3 text-white/60">
+              {project?.usersFeatures?.featrues?.map((feature, idx) => (
+                <li className=" flex items-center gap-4" key={idx}>
+                  {' '}
+                  <span className="">
+                    <CheckCircle className=" text-emerald-300" size={18} />
+                  </span>{' '}
+                  <span>{feature}</span>
+                </li>
+              ))}
             </ul>
 
             <div>
-              <ProjectCarousel />
+              <ProjectCarousel
+                images={project?.usersFeatures?.images as StaticImageData[]}
+              />
             </div>
           </div>
 
-          <div className=" mt-16">
-            <h2 className=" text-2xl font-semibold mb-4">
-              Admin Pages and Features
-            </h2>
-            <ul className=" flex flex-col gap-2 text-white/60">
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
+          {project?.adminFeatures && (
+            <div className=" mt-16">
+              <h2 className=" text-2xl font-semibold mb-4">
+                Admin Pages and Features
+              </h2>
+              <ul className=" flex flex-col gap-3 text-white/60">
+                {project?.adminFeatures?.featrues?.map((feature, idx) => (
+                  <li className=" flex items-center gap-4" key={idx}>
+                    {' '}
+                    <span className="">
+                      <CheckCircle className=" text-emerald-300" size={18} />
+                    </span>{' '}
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
 
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-
-              <li className=" flex items-start gap-3">
-                {' '}
-                <span className=" mt-[5px]">
-                  <CheckCircledIcon />
-                </span>{' '}
-                <span>
-                  Home: A vibrant and dynamic introduction to your portfolio,
-                  featuring interactive elements that immediately capture
-                  attention.
-                </span>
-              </li>
-            </ul>
-
-            <div>
-              <ProjectCarousel />
+              <div>
+                <ProjectCarousel
+                  images={project?.adminFeatures?.images as StaticImageData[]}
+                />
+              </div>
             </div>
-          </div>
+          )}
+
+          {project?.securityFeatures && (
+            <div className=" mt-16">
+              <h2 className=" text-2xl font-semibold mb-4">
+                Security Features
+              </h2>
+              <ul className=" flex flex-col gap-3 text-white/60">
+                {project?.securityFeatures?.featrues?.map((feature, idx) => (
+                  <li className=" flex items-center gap-4" key={idx}>
+                    {' '}
+                    <span className="">
+                      <CheckCircle className=" text-emerald-300" size={18} />
+                    </span>{' '}
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className=" mt-16">
             <h2 className=" text-2xl font-semibold mb-4">Conclusion</h2>
-            <p className=" text-white/60">
-              This is house related service Booking and Management. A one-stop
-              platform offering a wide range of house servicing options,
-              user-friendly registration and booking features, and a review
-              system for service quality. The project provides robust
-              administrative tools, allowing admins to manage users, services,
-              and bookings. Super admins have the ability to add and manage
-              admin users, ensuring efficient control of the platform's
-              activities. Prioritizing user experience with an intuitive booking
-              system, user dashboard, and feedback forms. Backend integration of
-              Node.js, Prisma, PostgreSQL, and Next.js on the frontend ensures
-              efficiency and a responsive interface.
-            </p>
+            <p className=" text-white/60">{project?.conclusion}</p>
           </div>
         </div>
       </section>

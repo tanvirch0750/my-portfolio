@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { skills } from './data';
 import SectionHeader from '@/components/SectionHeader';
 import Card from '@/components/Card';
+import grainImage from '@/assets/images/grain.jpg';
 
 export default function MyProjectsPage() {
   return (

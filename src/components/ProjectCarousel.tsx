@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Card from './Card';
 import {
   Carousel,
@@ -12,16 +12,20 @@ import {
 import Autoplay from 'embla-carousel-autoplay';
 import DemoImg from '@/assets/projects/meet-ease/me1.png';
 
-export default function ProjectCarousel() {
+export default function ProjectCarousel({
+  images,
+}: {
+  images: StaticImageData[];
+}) {
   return (
     <Carousel className="w-full" plugins={[Autoplay({ delay: 3000 })]}>
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {images?.map((item, index) => (
           <CarouselItem key={index}>
             <Card className=" p-0 rounded-xl mt-8">
               <Image
-                src={DemoImg}
-                alt="Photo by Drew Beamer"
+                src={item}
+                alt="Photo of project item"
                 className="h-full w-full object-contain rounded-xl"
               />
             </Card>

@@ -20,6 +20,7 @@ export default function Home() {
               height: 'h-100vh',
             }}
           ></div>
+
           <div className="size-[620px] hero-ring"></div>
           <div className="size-[820px] hero-ring"></div>
           <div className="size-[1020px] hero-ring"></div>
