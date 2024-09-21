@@ -75,7 +75,7 @@ export default function Sidebar({ className }: SidebarProps) {
         />
         <div className="">
           <h2 className="text-lg">Tanvir Chowdhury</h2>
-          <p className="text-sm text-white/50">Web Developer</p>
+          <p className="text-sm text-white/50">Javascript Developer</p>
         </div>
       </div>
 

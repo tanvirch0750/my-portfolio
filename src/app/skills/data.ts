@@ -42,6 +42,13 @@ export const skills = [
     icon: '/assets/tech-icons/nextjs-icon-svgrepo-com.svg',
   },
   {
+    name: 'Firebase',
+    description: 'Real-time Database & Authentication',
+    details:
+      'Firebase helps me build real-time apps quickly by providing a NoSQL database, user authentication, hosting, and other services that allow seamless backend integration.',
+    icon: '/assets/tech-icons/firebase-svgrepo-com.svg',
+  },
+  {
     name: 'Redux',
     description: 'State Management Simplified',
     details:
@@ -56,19 +63,27 @@ export const skills = [
     icon: '/assets/tech-icons/express-svgrepo-com.svg',
   },
   {
+    name: 'HTML5',
+    description: 'Markup Language for Web Development',
+    details:
+      'HTML5 forms the backbone of web development, allowing me to structure web pages with semantic elements, making them more accessible and SEO-friendly.',
+    icon: '/assets/tech-icons/html-5-svgrepo-com.svg',
+  },
+  {
+    name: 'CSS3',
+    description: 'Styling and Layout for Modern Web',
+    details:
+      'CSS3 enables me to style and layout web applications with precision. I use CSS for animations, responsive design, and creating visually engaging interfaces.',
+    icon: '/assets/tech-icons/css-3-svgrepo-com.svg',
+  },
+  {
     name: 'Ant Design',
     description: 'Elegant UI Components for Web Applications',
     details:
       'Ant Design provides a rich set of pre-built UI components, allowing me to quickly create visually appealing and responsive interfaces. It streamlines the design process, ensuring a consistent and user-friendly experience.',
     icon: '/assets/tech-icons/antdesign-svgrepo-com.svg',
   },
-  // {
-  //   name: 'REST API',
-  //   description: 'Building Scalable Web Services',
-  //   details:
-  //     'REST APIs allow me to create robust and scalable services that communicate between the frontend and backend. I design RESTful endpoints that adhere to best practices, ensuring smooth and efficient data exchange in web applications.',
-  //   icon: '/assets/tech-icons/rest-api-svgrepo-com.svg',
-  // },
+
   {
     name: 'PostgreSQL',
     description: 'Relational Database for Complex Queries',

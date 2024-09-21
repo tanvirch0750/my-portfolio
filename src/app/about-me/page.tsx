@@ -103,7 +103,7 @@ export default function AboutMePage() {
               results that align with business goals.
             </p>
             <div className="grid grid-cols-12 items-center ">
-              <div className="col-span-6 lg:col-span-3 flex  items-center gap-4">
+              <div className="col-span-12 lg:col-span-3 flex  items-center gap-4">
                 <MapPinHouseIcon className=" text-emerald-400" size={20} />
                 <span className="text-gray-400">Dhaka, Bangladesh</span>
               </div>

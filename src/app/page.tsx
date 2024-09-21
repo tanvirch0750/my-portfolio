@@ -131,11 +131,13 @@ export default function Home() {
 
           <div className=" max-w-lg mx-auto">
             <h1 className=" font-serif text-3xl text-center mt-8 tracking-wide md:text-5xl">
-              Building Exceptional user Experiences
+              Bringing Vision to Life Through Code
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I specialize in transforming desings into functional,
-              high-performing web applications. Let's discuss your next project.
+              I bring ideas to life by merging technology with human-centered
+              design, creating solutions that connect, inspire, and solve
+              real-world challenges. Together, we’ll turn your vision into
+              impactful applications.
             </p>
           </div>
 

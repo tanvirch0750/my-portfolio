@@ -2,6 +2,7 @@ import { NavItem } from '@/types';
 import { meetEaseImages } from './project-images/meet-ease';
 import { housecraftersImages } from './project-images/house-crafters';
 import { bookTrackingImages } from './project-images/book-tracking';
+import { strapToolsImages } from './project-images/strapping-tools';
 
 export const navItems: NavItem[] = [
   {
@@ -220,5 +221,67 @@ export const projectsData = [
 
     conclusion:
       'Book Tracker is the ideal solution for avid readers looking to manage their reading habits. Whether adding new books, tracking progress, or planning future reads, the platform ensures a smooth, secure, and efficient experience for all users, from casual readers to book enthusiasts.',
+  },
+  {
+    company: 'Straptools',
+    tag: 'straptools',
+    year: '2022',
+    type: 'MERN Stack',
+    title: 'Tools Manufacturer Website',
+    keyConcepts: [
+      { title: 'User Authentication and Role-Based Access' },
+      { title: 'Product Management and Ordering System' },
+      { title: 'Payment Integration with Stripe' },
+    ],
+    technologies:
+      'React.js, Firebase Authentication, Node.js, Express, MongoDB, Stripe, JWT, React Form Hook, Vanilla CSS, React Query',
+    links: [
+      {
+        link: 'https://straptools-420cd.web.app/',
+        title: 'Live Preview',
+      },
+      {
+        link: 'https://github.com/tanvirch0750/Straptools_Manufacturer_Client',
+        title: 'Github Frontend',
+      },
+      {
+        link: 'https://github.com/tanvirch0750/Straptools_Manufacturer_Server',
+        title: 'Github Backend',
+      },
+    ],
+    overview:
+      'Straptools is a manufacturer of strapping tools, providing products worldwide. The website is designed to facilitate easy ordering of strapping tools across three categories: Plastic, Textile, and Steel. Users must log in to purchase, and admins have control over product management and user roles. The website is built with a robust tech stack including React.js, Node.js, MongoDB, and Firebase Authentication.',
+    heroImg: strapToolsImages?.heroImg,
+    usersFeatures: {
+      features: [
+        'Login Required for Purchases: Users must log in to buy products.',
+        'Product Quantity Selection: Users can select product quantity during purchase, limited by available stock.',
+        "Add Review: Users can submit reviews for products via the 'Add Review' page.",
+        'My Orders Page: Users can view their orders and choose to make payments or cancel products.',
+        'My Profile Page: Users can view and update their profile information.',
+        'Responsive Design: Fully optimized for both desktop and mobile devices.',
+        'Stripe Payment Integration: Secure payments processed via Stripe.',
+      ],
+      images: strapToolsImages?.usersImages,
+    },
+    adminFeatures: {
+      features: [
+        "Manage Users: Admins can view all users and promote users to 'Admin'.",
+        'Add and Manage Products: Admins can add, edit, or remove products from the inventory.',
+        'Order Management: Admins can confirm or cancel orders.',
+        'Role-Based Permissions: Admins have access to advanced management tools.',
+      ],
+      images: strapToolsImages?.adminImages,
+    },
+    securityFeatures: {
+      features: [
+        'Firebase Authentication: Secure login system using Firebase.',
+        'JWT-Based Authentication: Token-based authentication to protect user sessions.',
+        'Role-Based Access Control: Different functionalities for users and admins.',
+        'Secure Payment Processing: Payments handled through Stripe for secure transactions.',
+      ],
+    },
+    conclusion:
+      'Straptools offers a comprehensive platform for strapping tool manufacturers, providing secure and efficient product management, user authentication, and payment processing. With role-based access control, the platform ensures a seamless experience for both regular users and administrators.',
   },
 ];
