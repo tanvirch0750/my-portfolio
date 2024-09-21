@@ -87,7 +87,7 @@ export default function ProjectDetailPage({
               Users Pages and Features
             </h2>
             <ul className=" flex flex-col gap-3 text-white/60">
-              {project?.usersFeatures?.featrues?.map((feature, idx) => (
+              {project?.usersFeatures?.features?.map((feature, idx) => (
                 <li className=" flex items-center gap-4" key={idx}>
                   {' '}
                   <span className="">
@@ -111,7 +111,7 @@ export default function ProjectDetailPage({
                 Admin Pages and Features
               </h2>
               <ul className=" flex flex-col gap-3 text-white/60">
-                {project?.adminFeatures?.featrues?.map((feature, idx) => (
+                {project?.adminFeatures?.features?.map((feature, idx) => (
                   <li className=" flex items-center gap-4" key={idx}>
                     {' '}
                     <span className="">
@@ -136,7 +136,7 @@ export default function ProjectDetailPage({
                 Security Features
               </h2>
               <ul className=" flex flex-col gap-3 text-white/60">
-                {project?.securityFeatures?.featrues?.map((feature, idx) => (
+                {project?.securityFeatures?.features?.map((feature, idx) => (
                   <li className=" flex items-center gap-4" key={idx}>
                     {' '}
                     <span className="">
