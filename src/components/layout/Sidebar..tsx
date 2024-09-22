@@ -108,13 +108,15 @@ export default function Sidebar({ className }: SidebarProps) {
           ))}
         </ul>
 
-        <button
+        <a
+          href="/tanvir_chowdhury-resume.pdf"
+          download="tanvir_chowdhury-resume.pdf"
           className={cn(
             'flex items-center justify-center gap-2 overflow-hidden rounded-lg py-2 text-sm font-medium text-white/70 antialiased border  hover:bg-white/20 hover:border-white/5 transition-all duration-200 bg-white/10 border-white/15 px-4 w-full '
           )}
         >
           Download My Resume
-        </button>
+        </a>
       </div>
     </aside>
   );
