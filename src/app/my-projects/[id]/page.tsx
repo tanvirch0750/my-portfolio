@@ -6,6 +6,12 @@ import Card from '@/components/Card';
 import ProjectCarousel from '@/components/ProjectCarousel';
 import { projectsData } from '@/constant/data';
 
+export async function generateStaticParams() {
+  return projectsData.map((project) => ({
+    id: project?.tag,
+  }));
+}
+
 export default function ProjectDetailPage({
   params,
 }: {

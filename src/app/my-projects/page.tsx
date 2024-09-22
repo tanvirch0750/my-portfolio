@@ -35,8 +35,8 @@ export default function MyProjectsPage() {
                     <span>{project?.company}</span>
                     <span>&bull;</span>
                     <span>{project?.year}</span>
-                    <span>&bull;</span>
-                    <span>{project?.type}</span>
+                    <span className="hidden md:block">&bull;</span>
+                    <span className="hidden md:block">{project?.type}</span>
                   </div>
 
                   <h3 className=" font-serif text-2xl md:text-4xl mt-2 md:mt-5 tracking-wide">
