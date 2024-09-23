@@ -14,8 +14,9 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'Created with the help of Frontend Tribe',
+  title: 'Tanvir Chowdhury | Portfolio',
+  description:
+    " I'm Mohammad Tanvir Chowdhury, and I am a passionate full-stack developer with expertise in building scalable and high-performance web applications using modern technologies such as JavaScript, TypeScript, React, Node.js, and MongoDB. My strong foundation in front-end and back-end development, paired with experience in designing RESTful APIs, ensures seamless integration and optimal user experiences.",
 };
 
 // 001219
