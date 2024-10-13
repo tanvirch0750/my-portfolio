@@ -43,6 +43,12 @@ export const navItems: NavItem[] = [
     label: 'my blogs',
   },
   {
+    title: 'Courses & training',
+    href: '/training-and-courses',
+    icon: 'courses',
+    label: 'courses and training',
+  },
+  {
     title: 'Contact ',
     href: '/contact',
     icon: 'contact',

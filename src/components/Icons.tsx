@@ -1,6 +1,7 @@
 import {
   AlertTriangle,
   ArrowRight,
+  BookCheck,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -78,6 +79,7 @@ export const Icons = {
   certificate: ShieldCheckIcon,
   contact: MailIcon,
   blogs: FilePenLine,
+  courses: BookCheck,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
