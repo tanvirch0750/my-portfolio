@@ -3,6 +3,7 @@ import { meetEaseImages } from './project-images/meet-ease';
 import { housecraftersImages } from './project-images/house-crafters';
 import { bookTrackingImages } from './project-images/book-tracking';
 import { strapToolsImages } from './project-images/strapping-tools';
+import { luxeAttireImages } from './project-images/luxe-attire';
 
 export const navItems: NavItem[] = [
   {
@@ -12,16 +13,16 @@ export const navItems: NavItem[] = [
     label: 'Home',
   },
   {
-    title: 'Skills',
-    href: '/skills',
-    icon: 'skill',
-    label: 'skills',
-  },
-  {
     title: 'About Me',
     href: '/about-me',
     icon: 'user',
     label: 'About Me',
+  },
+  {
+    title: 'Skills',
+    href: '/skills',
+    icon: 'skill',
+    label: 'skills',
   },
   {
     title: 'My Projects',
@@ -35,7 +36,12 @@ export const navItems: NavItem[] = [
     icon: 'education',
     label: 'my-experience',
   },
-
+  {
+    title: 'Blogs',
+    href: '/blogs',
+    icon: 'blogs',
+    label: 'my blogs',
+  },
   {
     title: 'Contact ',
     href: '/contact',
@@ -45,6 +51,67 @@ export const navItems: NavItem[] = [
 ];
 
 export const projectsData = [
+  {
+    company: 'Luxe Attire',
+    tag: 'luxe-attire',
+    year: '2024',
+    title: 'Clothing Marketplace Platform',
+    type: 'E-commerce',
+    keyConcepts: [
+      { title: 'Secure Payment Integration with Stripe' },
+      { title: 'Admin Dashboard with Order Management' },
+      { title: 'Product Inventory Management' },
+    ],
+    technologies:
+      'Next.js (v14), Tailwind CSS, Node.js, MongoDB, Redux, Redux Persist, NextAuth, Stripe, Resend (Email Service)',
+    links: [
+      {
+        link: 'https://luxe-attire.vercel.app/',
+        title: 'Live Preview',
+      },
+      {
+        link: 'https://github.com/tanvirch0750/Lux-Attire',
+        title: 'GitHub Code',
+      },
+    ],
+    overview:
+      'Luxe Attire is a modern, scalable e-commerce platform designed for seamless online shopping. With a focus on user experience, secure transactions, and comprehensive admin tools, the platform allows users to browse and purchase products with ease, while providing admins with robust product and order management features.',
+    heroImg: luxeAttireImages?.heroImg,
+    usersFeatures: {
+      features: [
+        'Responsive Design: Optimized for mobile, tablet, and desktop views.',
+        'Product Categories: Browse through categories like Kids Wear, Traditional Clothing, and Menswear.',
+        'Wishlist Functionality: Users can save favorite items for future viewing.',
+        'Cart Management: Items in the cart persist across sessions.',
+        'Checkout with Stripe: Secure payment through Stripe or Cash on Delivery.',
+        'Order Tracking: Users can track pending and delivered orders on the My Orders page.',
+        'Product Reviews: Registered users can review products and view reviews on the product detail page.',
+        'Advanced Filters & Pagination: Filter products by price, category, or rating with pagination for easy browsing.',
+      ],
+      images: luxeAttireImages?.usersImages,
+    },
+    adminFeatures: {
+      features: [
+        'Product Management: Add, edit, or delete products from the admin dashboard.',
+        'Order Management: Admins can update order statuses and view order statistics.',
+        'Inventory Management: Manage stock levels for each product to ensure availability.',
+        'User Management: View user details and manage roles.',
+        'Sales Overview: Dashboard with comprehensive sales and user statistics.',
+      ],
+      images: luxeAttireImages?.adminImages,
+    },
+    securityFeatures: {
+      features: [
+        'Protected Routes: Only authenticated users can access My Orders and Admin Dashboard.',
+        'Token-Based Authentication: Secure user authentication with NextAuth.',
+        'Form Validation: Ensures accurate input during registration, login, and checkout.',
+        'Secure Payment Processing: Payments processed through trusted gateway Stripe.',
+      ],
+    },
+    conclusion:
+      'Luxe Attire provides a feature-rich e-commerce platform for both shoppers and administrators. Its intuitive design, secure payment integration, and powerful admin tools make it a reliable solution for modern online clothing retailers.',
+  },
+
   {
     company: 'Meet Ease',
     tag: 'meet-ease',

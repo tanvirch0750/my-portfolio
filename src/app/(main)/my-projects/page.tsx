@@ -1,7 +1,6 @@
 import PageContainer from '@/components/layout/PageContainer';
 import CheckIcon from '@/assets/icons/check-circle.svg';
 import ArrowRight from '@/assets/icons/arrow-up-right.svg';
-import grainImage from '@/assets/images/grain.jpg';
 
 import Image from 'next/image';
 import Link from 'next/link';

@@ -87,8 +87,73 @@ const config: Config = {
       animation: {
         'ping-large': 'ping-large 1s ease-in-out infinite',
       },
+      typography: (theme: (arg0: string) => any) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.300'),
+            maxWidth: '65ch',
+            '[class~="lead"]': {
+              color: theme('colors.gray.400'),
+            },
+            a: {
+              color: theme('colors.blue.400'),
+              '&:hover': {
+                color: theme('colors.blue.300'),
+              },
+            },
+            strong: { color: theme('colors.gray.100') },
+            'ol > li::before': { color: theme('colors.gray.400') },
+            'ul > li::before': { backgroundColor: theme('colors.gray.600') },
+            hr: { borderColor: theme('colors.gray.700') },
+            blockquote: {
+              color: theme('colors.gray.100'),
+              borderLeftColor: theme('colors.gray.700'),
+            },
+            h1: { color: theme('colors.gray.100') },
+            h2: { color: theme('colors.gray.100') },
+            h3: { color: theme('colors.gray.100') },
+            h4: { color: theme('colors.gray.100') },
+            'figure figcaption': { color: theme('colors.gray.400') },
+            code: {
+              color: theme('colors.green.400'),
+              backgroundColor: theme('colors.gray.800'),
+              fontWeight: '400',
+              borderRadius: theme('borderRadius.md'),
+              padding: theme('spacing.1'),
+            },
+            'code::before': { content: '""' },
+            'code::after': { content: '""' },
+            pre: {
+              color: theme('colors.gray.200'),
+              backgroundColor: theme('colors.gray.900'),
+              borderRadius: theme('borderRadius.lg'),
+              padding: theme('spacing.4'),
+              border: `1px solid ${theme('colors.gray.700')}`,
+            },
+            'pre code': {
+              color: 'inherit',
+              backgroundColor: 'transparent',
+              padding: '0',
+            },
+            thead: {
+              color: theme('colors.gray.100'),
+              borderBottomColor: theme('colors.gray.600'),
+            },
+            'tbody tr': { borderBottomColor: theme('colors.gray.700') },
+          },
+        },
+        lg: {
+          css: {
+            fontSize: '1rem',
+            h1: { fontSize: '1.90rem' },
+            h2: { fontSize: '1.75rem' },
+            h3: { fontSize: '1.5rem' },
+            h4: { fontSize: '1.25rem' },
+          },
+        },
+      }),
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 };
 export default config;

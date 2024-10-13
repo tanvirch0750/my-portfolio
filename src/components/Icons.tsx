@@ -8,6 +8,7 @@ import {
   Command,
   CreditCard,
   File,
+  FilePenLine,
   FileText,
   Folders,
   GraduationCapIcon,
@@ -76,6 +77,7 @@ export const Icons = {
   education: GraduationCapIcon,
   certificate: ShieldCheckIcon,
   contact: MailIcon,
+  blogs: FilePenLine,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

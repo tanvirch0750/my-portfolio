@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Sidebar from '@/components/layout/Sidebar.';
 import { Inter, Calistoga } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
-import Header from '@/components/layout/Header';
-import FramerProvider from './providers/StoreProvider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const calistoga = Calistoga({
@@ -35,13 +32,7 @@ export default function RootLayout({
           'bg-brand text-white font-sans antialiased'
         )}
       >
-        <div className="flex">
-          <Sidebar />
-          <main className="w-full flex-1 overflow-hidden bg-brand text-white">
-            <Header />
-            <FramerProvider> {children}</FramerProvider>
-          </main>
-        </div>
+        {children}
       </body>
     </html>
   );
