@@ -45,7 +45,7 @@ const CodeBlock = ({ value }: any) => {
         customStyle={{
           padding: '1rem',
           borderRadius: '0.5rem',
-          fontSize: '0.875rem',
+          fontSize: '1rem',
           lineHeight: '1.5',
         }}
       >

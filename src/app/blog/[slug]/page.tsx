@@ -2,7 +2,13 @@ import React from 'react';
 import { getPostBySlug } from '@/sanity/sanity-utils';
 import RenderBodyContent from '@/components/blog/RenderBodyContent';
 import PageContainer from '@/components/layout/PageContainer';
-import { CalendarIcon, UserIcon, TagIcon, ArrowLeftIcon } from 'lucide-react';
+import {
+  CalendarIcon,
+  UserIcon,
+  TagIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { imageBuilder } from '@/sanity/sanity-utils';
@@ -12,17 +18,26 @@ export default async function SingleBlogPage({ params }: { params: any }) {
   const imageUrl = imageBuilder(post.mainImage.asset._ref).url();
 
   return (
-    <PageContainer scrollable>
-      <article className="max-w-4xl mx-auto px-4 py-8">
-        <Link
-          href="/blogs"
-          className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6"
-        >
-          <ArrowLeftIcon className="w-4 h-4 mr-2" />
-          Back to all blogs
-        </Link>
+    <div className=" w-full bg-brand-secondary">
+      <article className="max-w-4xl mx-auto px-4 py-8 ">
+        <div className=" border-b border-brand flex justify-between items-center">
+          <Link
+            href="/blogs"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6"
+          >
+            <ArrowLeftIcon className="w-4 h-4 mr-2" />
+            Back to all blogs
+          </Link>
+          <Link
+            href="/"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6"
+          >
+            <ArrowRightIcon className="w-4 h-4 mr-2" />
+            Home
+          </Link>
+        </div>
 
-        <header className="mb-8">
+        <header className="my-8">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white leading-tight">
             {post.title}
           </h1>
@@ -74,6 +89,6 @@ export default async function SingleBlogPage({ params }: { params: any }) {
           <RenderBodyContent post={post} />
         </div>
       </article>
-    </PageContainer>
+    </div>
   );
 }

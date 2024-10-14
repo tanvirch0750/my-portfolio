@@ -12,7 +12,7 @@ export default function BlogItem({ blog }: { blog: Blog }) {
 
   return (
     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-0">
-      <Link href={`/blogs/${blog.slug.current}`} className="block">
+      <Link href={`/blog/${blog.slug.current}`} className="block">
         <article className="flex flex-col h-full">
           <div className="relative aspect-video overflow-hidden rounded-t-2xl">
             <Image
@@ -45,7 +45,7 @@ export default function BlogItem({ blog }: { blog: Blog }) {
                 <Badge
                   key={index}
                   variant="secondary"
-                  className="bg-white/60 text-primary hover:bg-primary/20 capitalize"
+                  className="bg-white/60 text-primary hover:bg-white/50 capitalize"
                 >
                   {tag}
                 </Badge>
