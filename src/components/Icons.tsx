@@ -2,6 +2,7 @@ import {
   AlertTriangle,
   ArrowRight,
   BookCheck,
+  Briefcase,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -13,6 +14,7 @@ import {
   FileText,
   Folders,
   GraduationCapIcon,
+  HeartHandshake,
   HelpCircle,
   HomeIcon,
   Image,
@@ -80,6 +82,8 @@ export const Icons = {
   contact: MailIcon,
   blogs: FilePenLine,
   courses: BookCheck,
+  experience: Briefcase,
+  services: HeartHandshake,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

@@ -1,18 +1,17 @@
 'use client';
-import React, { useState } from 'react';
 
 import { cn } from '@/lib/utils';
 
-import Image from 'next/image';
-import { navItems } from '@/constant/data';
-import { Navigation } from '../Navigation';
 import TanvirImage from '@/assets/images/tanvir-final.png';
+import { navItems } from '@/constant/data';
+import Image from 'next/image';
+import { Navigation } from '../Navigation';
 
-import FbIcon from '@/assets/icons/facebook-svgrepo-com.svg';
-import TwitterIcon from '@/assets/icons/twitter-154-svgrepo-com.svg';
-import LinkedinIcon from '@/assets/icons/linkedin-svgrepo-com.svg';
-import GithubIcon from '@/assets/icons/github-svgrepo-com.svg';
 import DiscordIcon from '@/assets/icons/discord-svgrepo-com.svg';
+import FbIcon from '@/assets/icons/facebook-svgrepo-com.svg';
+import GithubIcon from '@/assets/icons/github-svgrepo-com.svg';
+import LinkedinIcon from '@/assets/icons/linkedin-svgrepo-com.svg';
+import TwitterIcon from '@/assets/icons/twitter-154-svgrepo-com.svg';
 import Link from 'next/link';
 import TechIcon from '../TechIcon';
 import {
@@ -75,7 +74,7 @@ export default function Sidebar({ className }: SidebarProps) {
         />
         <div className="">
           <h2 className="text-lg">Tanvir Chowdhury</h2>
-          <p className="text-sm text-white/50">Javascript Developer</p>
+          <p className="text-sm text-white/50">Full-Stack Developer</p>
         </div>
       </div>
 

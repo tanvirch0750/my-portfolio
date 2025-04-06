@@ -1,9 +1,9 @@
 import { NavItem } from '@/types';
-import { meetEaseImages } from './project-images/meet-ease';
-import { housecraftersImages } from './project-images/house-crafters';
 import { bookTrackingImages } from './project-images/book-tracking';
-import { strapToolsImages } from './project-images/strapping-tools';
+import { housecraftersImages } from './project-images/house-crafters';
 import { luxeAttireImages } from './project-images/luxe-attire';
+import { meetEaseImages } from './project-images/meet-ease';
+import { strapToolsImages } from './project-images/strapping-tools';
 
 export const navItems: NavItem[] = [
   {
@@ -25,17 +25,24 @@ export const navItems: NavItem[] = [
     label: 'skills',
   },
   {
+    title: 'Experience ',
+    href: '/my-experience',
+    icon: 'experience',
+    label: 'my-experience',
+  },
+  {
+    title: 'Services ',
+    href: '/services',
+    icon: 'services',
+    label: 'my services',
+  },
+  {
     title: 'My Projects',
     href: '/my-projects',
     icon: 'orders',
     label: 'my projects',
   },
-  {
-    title: 'Experience & Education',
-    href: '/my-experience',
-    icon: 'education',
-    label: 'my-experience',
-  },
+
   {
     title: 'Blogs',
     href: '/blogs',

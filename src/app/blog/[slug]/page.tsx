@@ -1,26 +1,77 @@
-import React from 'react';
-import { getPostBySlug } from '@/sanity/sanity-utils';
 import RenderBodyContent from '@/components/blog/RenderBodyContent';
-import PageContainer from '@/components/layout/PageContainer';
+import { getPostBySlug, imageBuilder } from '@/sanity/sanity-utils';
 import {
-  CalendarIcon,
-  UserIcon,
-  TagIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
+  CalendarIcon,
+  TagIcon,
+  UserIcon,
 } from 'lucide-react';
+import type { Metadata, ResolvingMetadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { imageBuilder } from '@/sanity/sanity-utils';
 
-export default async function SingleBlogPage({ params }: { params: any }) {
+// Generate metadata for SEO and social sharing
+export async function generateMetadata(
+  { params }: { params: { slug: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // Fetch the post data
+  const post = await getPostBySlug(params.slug);
+  const imageUrl = imageBuilder(post.mainImage.asset._ref).url();
+
+  // Format the publication date
+  const formattedDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+  // Create metadata object
+  return {
+    title: post.title,
+    description:
+      post.metadata || `${post.title} - Published on ${formattedDate}`,
+    authors: [{ name: post.author.name }],
+    openGraph: {
+      title: post.title,
+      description:
+        post.metadata || `${post.title} - Published on ${formattedDate}`,
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: [post.author.name],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description:
+        post.metadata || `${post.title} - Published on ${formattedDate}`,
+      images: [imageUrl],
+    },
+  };
+}
+
+export default async function SingleBlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const post = await getPostBySlug(params.slug);
   const imageUrl = imageBuilder(post.mainImage.asset._ref).url();
 
   return (
-    <div className=" w-full bg-brand-secondary">
-      <article className="max-w-4xl mx-auto px-4 py-8 ">
-        <div className=" border-b border-brand flex justify-between items-center">
+    <div className="w-full bg-brand-secondary">
+      <article className="max-w-4xl mx-auto px-4 py-8">
+        <div className="border-b border-brand flex justify-between items-center">
           <Link
             href="/blogs"
             className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6"
@@ -75,7 +126,7 @@ export default async function SingleBlogPage({ params }: { params: any }) {
         <div className="mb-8 overflow-hidden rounded-lg">
           <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
             <Image
-              src={imageUrl}
+              src={imageUrl || '/placeholder.svg'}
               alt={post.title}
               fill
               className="object-contain"
